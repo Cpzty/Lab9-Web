@@ -7,3 +7,4 @@ class ChismeSerializer(serializers.ModelSerializer):
         model = Chisme
         fields = ('titulo','descripcion','fecha_de_creacion')
         
+        

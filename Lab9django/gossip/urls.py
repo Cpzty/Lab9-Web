@@ -1,9 +1,11 @@
 from django.conf.urls import url, include
-from rest_framework.urlpatterns import format_suffix_pattern
+from rest_framework.urlpatterns import format_suffix_patterns
 from .views import CreateView
+from .views import DetailsView
 
 urlpatterns = {
     url(r'^chismes/$', CreateView.as_view(), name="create"),
+    url(r'^chismes/(?P<pk>[0-9]+)/$', DetailsView.as_view(),name="details"),
     }
 
-url patterns = format_suffix_patterns(urlpatterns)
+urlpatterns = format_suffix_patterns(urlpatterns)
